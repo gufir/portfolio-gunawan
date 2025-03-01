@@ -2,21 +2,23 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
+import AboutView from './views/AboutView.vue'
 </script>
 
 <template>
-  <v-app>
+  <div class="min-h-screen flex flex-col">
     <!-- Navbar -->
     <Navbar />
 
     <!-- Main Content -->
-    <v-main>
-      <router-view />
-    </v-main>
+    <main class="flex-grow">
+      <AboutView />
+      <RouterView />
+    </main>
 
     <!-- Footer -->
     <Footer />
-  </v-app>
+  </div>
 </template>
 
 <style scoped></style>
