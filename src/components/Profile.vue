@@ -15,7 +15,7 @@ const user = ref<User>({
 </script>
 
 <template>
-  <div class="flex justify-center items-center pt-40 pb-10">
+  <div class="flex justify-center items-center pt-40 pb-25">
     <div class="flex flex-col md:flex-row items-center">
       <!-- Avatar -->
       <div class="flex justify-center mb-4 md:mb-0 md:mr-32 sm:mr-16">
@@ -32,7 +32,7 @@ const user = ref<User>({
         <button
           class="bg-[#66D2CE] hover:bg-[#2DAA9E] text-black-200 hover:text-white font-medium px-4 py-2 rounded-full transition duration-300 mt-4"
         >
-          <i class="mdi mdi-download mr-2"></i>
+          <i class="mdi mdi-file mr-2"></i>
           Resume
         </button>
       </div>

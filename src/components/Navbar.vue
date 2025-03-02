@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 left-0 w-full flex justify-center py-10">
+  <div class="fixed top-0 left-0 w-full flex justify-center py-10 z-50">
     <div class="bg-[#66D2CE] rounded-full shadow-lg px-4 py-2 flex space-x-8">
       <a
         v-for="item in items"
