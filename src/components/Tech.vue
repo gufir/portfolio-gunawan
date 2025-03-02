@@ -16,7 +16,7 @@ const techStack = ref([
   { icon: 'logos:visual-studio-code', url: 'https://code.visualstudio.com/' },
   { icon: 'logos:git-icon', url: 'https://git-scm.com/' },
   { icon: 'logos:docker-icon', url: 'https://www.docker.com/' },
-  { icon: 'logos:html-5', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
+  { icon: 'logos:grpc', url: 'https://grpc.io/' },
 ])
 
 const techStack2 = ref([
@@ -32,14 +32,18 @@ const techStack2 = ref([
   { icon: 'logos:swagger', url: 'https://swagger.io/' },
   { icon: 'logos:github-icon', url: 'https://github.com/' },
   { icon: 'logos:css-3', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+  { icon: 'logos:html-5', url: 'https://developer.mozilla.org/en-US/docs/Web/HTML' },
 ])
 </script>
 
 <template>
   <div
-    class="overflow-hidden w-1/2 flex flex-col items-center p-6 rounded-2xl gap-4 border-x-[5px] border-[#66D2CE]"
+    class="overflow-hidden w-1/2 flex flex-col items-center p-6 rounded-2xl gap-4 border-x-[3px] border-[#66D2CE]"
   >
-    <h2 class="text-2xl font-bold text-black pb-10">Tech and Tools</h2>
+    <h2 class="text-2xl font-bold text-black">Tech and Tools</h2>
+    <p class="text-gray-600 text-center pb-4">
+      Here are some of the technologies and tools that I have worked with and am familiar with
+    </p>
 
     <div class="slider">
       <div class="slide-track track-1">
