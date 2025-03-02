@@ -18,6 +18,11 @@
         <p class="text-sm text-gray-600">{{ edu.time }}</p>
         <p class="text-gray-700">{{ edu.detail }}</p>
       </div>
+      <div
+        class="flex p-6 rounded-2xl w-3/4 mx-auto text-center items-center mt-12 justify-center pt-10"
+      >
+        <Connect />
+      </div>
     </section>
 
     <section class="w-1/2">
@@ -43,6 +48,8 @@
 </template>
 
 <script setup lang="ts">
+import Connect from './Connect.vue'
+
 const education = [
   {
     title: 'ELECTRONICS AND INSTRUMENTATION',

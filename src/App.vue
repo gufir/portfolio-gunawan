@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 import AboutView from './views/AboutView.vue'
 import TechView from './views/TechView.vue'
+import ProjectView from './views/ProjectView.vue'
 </script>
 
 <template>
@@ -12,10 +13,22 @@ import TechView from './views/TechView.vue'
     <Navbar />
 
     <!-- Main Content -->
-    <main class="flex-grow">
-      <AboutView />
+    <main class="flex-grow min-h-screen">
+      <section id="about">
+        <AboutView />
+      </section>
+
+      <section id="tech" class="min-h-screen">
+        <TechView />
+      </section>
+
+      <section id="project" class="min-h-screen">
+        <ProjectView />
+      </section>
+      <!-- <AboutView />
       <TechView />
-      <RouterView />
+      <ProjectView /> 
+      <RouterView /> -->
     </main>
 
     <!-- Footer -->
