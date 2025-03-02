@@ -7,6 +7,9 @@ export default {
         primary: '#f59e0b',
         secondary: '#ec4899',
       },
+      fontFamily: {
+        sans: ['Roboto', 'Arial', 'sans-serif'],
+      },
     },
   },
   plugins: [],
