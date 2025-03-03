@@ -10,7 +10,7 @@ interface User {
 const user = ref<User>({
   name: 'Gunawan Firdaus',
   bio: 'IoT, Automation, and Backend Engineer passionate about Industry 4.0',
-  avatar: '../src/assets/images/gunawan.jpeg',
+  avatar: '/gunawan.jpeg',
 })
 </script>
 
@@ -30,7 +30,7 @@ const user = ref<User>({
         <h1 class="text-4xl font-bold">{{ user.name }}</h1>
         <p class="text-lg text-gray-500 mt-2 py-2">{{ user.bio }}</p>
         <a
-          href="../src/assets/documents/Gunawan_Resume.pdf"
+          href="/documents/Gunawan_Resume.pdf"
           download="Gunawan Firdaus_Resume.pdf"
           class="bg-[#66D2CE] hover:bg-[#2DAA9E] text-black font-medium px-4 py-2 rounded-full transition duration-300 mt-4 flex items-center"
         >

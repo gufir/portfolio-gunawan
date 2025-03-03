@@ -2,9 +2,9 @@
 import { ref } from 'vue'
 
 const items = ref([
-  { text: 'IoT', icon: '../src/assets/icon/iot.png' },
-  { text: 'Backend', icon: '../src/assets/icon/backend.png' },
-  { text: 'Automation', icon: '../src/assets/icon/automation.png' },
+  { text: 'IoT', icon: '/icon/iot.png' },
+  { text: 'Backend', icon: '/icon/backend.png' },
+  { text: 'Automation', icon: '/icon/automation.png' },
 ])
 </script>
 

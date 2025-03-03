@@ -15,24 +15,23 @@ const icons = ref([
     link: 'https://www.instagram.com/gunawan.fir/',
   },
   { name: 'ymail', icon: 'mdi:email', link: 'mailto:gunawan.firdaus99@ymail.com' },
+  { name: 'ymail', icon: 'simple-icons:tryhackme', link: 'https://tryhackme.com/p/gunfir' },
 ])
 </script>
 
 <template>
-  <div class="relative p-6 border-[3px] border-[#66D2CE] rounded-2xl w-full mx-auto text-center">
+  <div class="relative p-6 border-[3px] border-[#66D2CE] rounded-2xl max-w-lg mx-auto text-center">
     <h2 class="text-2xl font-bold pt-2 flex items-center justify-center pb-5">Let's Connect</h2>
-    <div class="flex justify-center items-center gap-x-6 w-full">
+    <div class="flex flex-wrap justify-center items-center gap-4">
       <a
         v-for="icon in icons"
         :key="icon.name"
         :href="icon.link"
         target="_blank"
         rel="noopener noreferrer"
+        class="transition-transform duration-300 hover:scale-110"
       >
-        <Icon
-          :icon="icon.icon"
-          class="text-5xl transition-transform duration-300 hover:scale-130"
-        />
+        <Icon :icon="icon.icon" class="text-4xl sm:text-5xl" />
       </a>
     </div>
   </div>
