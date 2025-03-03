@@ -46,7 +46,7 @@ const techStack2 = ref([
     </p>
 
     <div class="slider">
-      <div class="slide-track track-1">
+      <div class="slide-track track-1 py-4">
         <a
           v-for="(tech, index) in [...techStack, ...techStack]"
           :key="`${tech.icon}-${index}`"
@@ -55,7 +55,10 @@ const techStack2 = ref([
           rel="noopener noreferrer"
           class="slide"
         >
-          <Icon :icon="tech.icon" class="text-4xl text-white" />
+          <Icon
+            :icon="tech.icon"
+            class="text-4xl text-white transition-transform duration-300 hover:scale-140"
+          />
         </a>
       </div>
     </div>
@@ -70,7 +73,10 @@ const techStack2 = ref([
           rel="noopener noreferrer"
           class="slide"
         >
-          <Icon :icon="tech.icon" class="text-4xl text-white" />
+          <Icon
+            :icon="tech.icon"
+            class="text-4xl text-white transition-transform duration-300 hover:scale-140"
+          />
         </a>
       </div>
     </div>

@@ -20,7 +20,8 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, onUnmounted, nextTick } from 'vue'
+import { ref, onMounted, onUnmounted, nextTick, watch } from 'vue'
+import { useRoute } from 'vue-router'
 
 interface NavItem {
   text: string
@@ -33,13 +34,19 @@ const items = ref<NavItem[]>([
   { text: 'Projects', link: 'project' },
 ])
 
+const route = useRoute()
 const activeSection = ref<string>('about')
 
 const scrollToSection = (id: string) => {
-  const section = document.getElementById(id)
-  if (section) {
-    section.scrollIntoView({ behavior: 'smooth', block: 'start' })
-  }
+  nextTick(() => {
+    const section = document.getElementById(id)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      setTimeout(() => {
+        activeSection.value = id
+      }, 300)
+    }
+  })
 }
 
 const observeSections = () => {
@@ -54,14 +61,30 @@ const observeSections = () => {
       },
       { root: null, threshold: 0.3 },
     )
-    items.value.forEach((item) => {
-      const section = document.getElementById(item.link)
-      if (section) {
-        observer.observe(section)
-      }
-    })
+
+    const sections = document.querySelectorAll('section')
+    if (sections.length === 0) {
+      // Jika elemen belum ada, tunggu sampai ada
+      const observerDOM = new MutationObserver(() => {
+        const updatedSections = document.querySelectorAll('section')
+        if (updatedSections.length > 0) {
+          updatedSections.forEach((section) => observer.observe(section))
+          observerDOM.disconnect()
+        }
+      })
+
+      observerDOM.observe(document.body, { childList: true, subtree: true })
+    } else {
+      sections.forEach((section) => observer.observe(section))
+    }
   })
 }
+watch(
+  () => route.path,
+  () => {
+    observeSections()
+  },
+)
 
 onMounted(() => {
   observeSections()
