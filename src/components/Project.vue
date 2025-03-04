@@ -137,7 +137,7 @@ const projects = ref<Project[]>([
 
 <template>
   <div class="container mx-auto pb-30 flex flex-col items-center">
-    <h2 class="text-3xl font-bold text-center pt-10 pb-5 mb-6">Projects</h2>
+    <h2 class="text-3xl text-black text-center pt-10 pb-5 mb-6">Projects</h2>
     <p class="text-gray-600 text-center mb-10">
       This section showcases projects to which I have contributed, both individually and in team
       environments
@@ -160,7 +160,7 @@ const projects = ref<Project[]>([
           class="max-w-xs h-32 object-cover rounded-md mb-4 mx-auto transition-transform duration-300 hover:scale-130"
           @click.stop="openImage(project.image)"
         />
-        <h3 class="text-xl font-bold mb-2 pt-2">{{ project.title }}</h3>
+        <h3 class="text-xl text-black mb-2 pt-2">{{ project.title }}</h3>
         <p class="text-gray-600 mb-2 pb-3">{{ project.description }}</p>
         <span class="inline-block bg-[#66D2CE] text-black text-sm px-3 py-1 rounded-full">
           {{ project.tech }}

@@ -40,7 +40,7 @@ const techStack2 = ref([
   <div
     class="overflow-hidden w-1/2 flex flex-col items-center p-6 rounded-2xl gap-4 border-x-[3px] border-[#66D2CE]"
   >
-    <h2 class="text-2xl font-bold text-black">Tech and Tools</h2>
+    <h2 class="text-2xl text-center text-black">Tech and Tools</h2>
     <p class="text-gray-600 text-center pb-4">
       Here are some of the technologies and tools that I have worked with and am familiar with
     </p>
