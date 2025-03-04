@@ -2,6 +2,7 @@
 import AboutView from './AboutView.vue'
 import TechView from './TechView.vue'
 import ProjectView from './ProjectView.vue'
+import Connect from '@/components/Connect.vue'
 </script>
 
 <template>

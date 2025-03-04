@@ -14,14 +14,14 @@ const icons = ref([
     icon: 'skill-icons:instagram',
     link: 'https://www.instagram.com/gunawan.fir/',
   },
-  { name: 'ymail', icon: 'mdi:email', link: 'mailto:gunawan.firdaus99@ymail.com' },
+  { name: 'ymail', icon: 'skill-icons:gmail-light', link: 'mailto:gunawan.firdaus99@ymail.com' },
   { name: 'ymail', icon: 'simple-icons:tryhackme', link: 'https://tryhackme.com/p/gunfir' },
 ])
 </script>
 
 <template>
-  <div class="relative p-6 border-[3px] border-[#66D2CE] rounded-2xl max-w-lg mx-auto text-center">
-    <h2 class="text-2xl font-bold pt-2 flex items-center justify-center pb-5">Let's Connect</h2>
+  <div class="relative pt-10 rounded-2xl max-w-lg mx-auto text-center flex flex-col items-center">
+    <!-- <h2 class="text-2xl pt-2 pb-5 text-black">Let's Connect</h2> -->
     <div class="flex flex-wrap justify-center items-center gap-4">
       <a
         v-for="icon in icons"
@@ -29,9 +29,9 @@ const icons = ref([
         :href="icon.link"
         target="_blank"
         rel="noopener noreferrer"
-        class="transition-transform duration-300 hover:scale-110"
+        class="transition-transform duration-300 hover:scale-120"
       >
-        <Icon :icon="icon.icon" class="text-4xl sm:text-5xl" />
+        <Icon :icon="icon.icon" class="text-xl sm:text-4xl !text-red-500 inline" />
       </a>
     </div>
   </div>
