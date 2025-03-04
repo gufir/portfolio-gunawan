@@ -1,6 +1,6 @@
 <template>
-  <footer class="bg-[#66D2CE] text-gray text-center py-4 mt-10">
-    <p>&copy; {{ currentYear }} Gunawan. All rights reserved.</p>
+  <footer class="bg-[#66D2CE] text-center py-4 mt-10">
+    <p class="text-black">&copy; {{ currentYear }} Gunawan. All rights reserved.</p>
   </footer>
 </template>
 

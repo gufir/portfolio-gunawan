@@ -7,11 +7,9 @@
         <div
           class="w-full bg-surface-0 dark:bg-surface-900 py-20 px-8 sm:px-20 flex flex-col items-center"
         >
-          <span class="text-[#66D2CE] font-bold text-9xl">404</span>
-          <h1 class="text-surface-900 dark:text-surface-0 font-bold text-3xl lg:text-7xl mb-2">
-            Not Found
-          </h1>
-          <div class="text-surface-600 dark:text-surface-200 pb-4">
+          <span class="text-[#66D2CE] text-9xl">404</span>
+          <h1 class="dark:text-surface-0 text-3xl lg:text-7xl mb-2 text-black">Not Found</h1>
+          <div class="text-surface-600 dark:text-surface-200 pb-4 text-black">
             Requested resource is not available.
           </div>
           <RouterLink to="/" custom v-slot="{ navigate }">
